@@ -1,0 +1,80 @@
+
+.register{
+  margin-top: 50px;
+    margin: auto;
+ left: 30%;
+      width: 40%;
+      height: auto ;
+    
+   
+    }
+    .r-heading{
+      margin-top: 40px;
+      text-align: center;
+      font-family: "Avenir Medium", sans-serif
+      Font being rendered;
+      font-size:
+    24px;
+    font-weight: 400;
+    }
+    
+    .r-inputs{
+      width: 80%;
+      margin: auto;
+     
+      display: flex;
+      gap: 5px;
+      flex-direction: column;
+      justify-content: start;
+      align-items: start;
+    }
+    .r-inputs>input{
+    height: 45px;
+    border-radius: 5px;
+    border: 0.1px solid rgb(150, 150, 150);
+    width: 100%;
+    }
+    .submit{
+      height: 47px;
+      cursor: pointer;
+       width: 100%;
+       margin-top: 40px;
+       margin-bottom: 5%;
+       border-radius: 5px;
+        padding-top: 1%;
+        border: 0.5px solid rgb(172, 166, 166);
+       font-size: 15px;
+       background-color:rgb(75,86,102);
+       color: white;
+       text-align: center;
+    }
+    .submit:hover{
+    color:rgb(75,86,102);
+    background-color: rgb(253,253,249);
+    }
+    .r-inputs>span{
+      font-size: 14px;
+    }
+    
+    .r-inputs>span>a{
+      color: rgb(44, 166, 231);
+    }
+    .create-button{
+      height: 47px;
+      cursor: pointer;
+       width: 80%;
+       margin-bottom: 5%;
+    border: 0.5px solid rgb(107, 104, 104);
+       border-radius: 5px;
+        padding-top: 1%;
+        /* border: 0.5px solid rgb(172, 166, 166); */
+       font-size: 15px;
+       background-color:white;
+       color: rgb(75,86,102);
+     margin-left: 50px;
+      }
+    
+    .create-button:hover{
+      background-color: rgb(75,86,102);
+      color:white;
+      }

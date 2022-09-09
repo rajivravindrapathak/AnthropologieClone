@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style/navbar.css">
+    <style>
+        #login1{
+            height: 700px;
+            width: 100%;
+            background-color: white;
+            border: 1px solid red ;
+        }
+        #login1 >h1{
+color: black;
+text-align: center;
+
+        }
+        #login2 {
+            height: 40px;
+      margin: auto;
+      margin-bottom: 2%;
+            width: 8%;
+            display: flex;
+            justify-content: space-around;
+            
+        }
+        #login2 >img{
+
+height: 100%;
+
+        }
+        #login3{
+            display: grid;
+            grid-template-rows: repeat(1);
+            width: 36%;
+            height: 80%;
+            
+            margin: auto;
+            
+        }
+        #lable{
+            font-size: 14px;
+            color: rgb(82, 79, 79);
+         
+         }
+        #loginid > input{
+             height: 20px;
+             width: 99%;
+             border-radius: 2px;
+                 margin-bottom: 3%;
+              margin-top: 1%;
+              border: 0.5px solid rgb(219, 211, 211);
+             font-size: 15px;
+             font-weight: 700;
+            
+         }
+         #submit{
+            height: 40px;
+             width: 100%;
+             margin-top: 3%;
+             margin-bottom: 5%;
+             border-radius: 5px;
+              padding-top: 1%;
+              border: 0.5px solid rgb(172, 166, 166);
+             font-size: 20px;
+             background-color: red;
+             color: white;
+             text-align: center;
+         }
+         #createacc{
+             font-size: bold;
+             font-size: 8px;
+             margin: 0%;
+             color: red;
+         }
+         #sizediv,#colorimage{
+           margin: auto;
+    
+             display: grid;
+             grid-template-columns: repeat(4,1fr);
+             gap: 10px;
+         }
+         #sizediv>,#colorimage>{
+           height: 20px;
+           border: 0.5px solid rgb(172, 166, 166);
+         }
+    </style>
+</head>
+<body>
+    <div id="header">
+    
+    </div>
+
+<!-- //login  -->
+<div id="login1">
+    <h1>append data</h1>
+   
+    <div id="login3">
+        <form id="loginid">
+            <label id="lable">title</label>
+            <input type="text" id="title">
+            <label id="lable">Imagelink1</label>
+            <input type="text" id="imagelink1">
+            <label id="lable">Imagelink2</label>
+            <input type="text" id="imagelink2">
+            <label id="lable">Imagelink3</label>
+            <input type="text" id="imagelink3">
+            <label id="lable">Imagelink4</label>
+            <input type="text" id="imagelink4">
+            <label id="lable">size</label>
+        <div id="sizediv">
+            <input type="text" id="size1">
+            <input type="text" id="size2">
+            <input type="text" id="size3">
+            <input type="text" id="size4">
+            <input type="text" id="size5">
+            <input type="text" id="size6">
+            <input type="text" id="size7">
+            <input type="text" id="size8">
+            <input type="text" id="size9">
+            <input type="text" id="size10">
+
+           
+        </div>
+        <label id="lable">colorimage</label>
+        <div id="colorimage">
+            <input type="text" id="color1">
+            <input type="text" id="color2">
+            <input type="text" id="color3">
+            <input type="text" id="color4">
+            <input type="text" id="color5">
+            <input type="text" id="color6">
+            <input type="text" id="color7">
+            <input type="text" id="color8">
+           
+
+           
+        </div>
+
+            <label id="lable">category</label>
+            <input type="text" id="category">
+            <label id="lable">price</label>
+            <input type="text" id="price">
+            <label id="lable">detail</label>
+            <input type="text" id="detail">
+            <button id="submit">create</button>
+           
+        </form>
+        
+    
+
+    </div>
+
+</div>
+    
+</body>
+</html>
+<script >
+   
+    const form = document.getElementById('loginid')
+			form.addEventListener('submit', registerUser)
+
+			async function registerUser(event) {
+				event.preventDefault()
+                const title= document.getElementById('title').value
+				const image_link1 = document.getElementById('imagelink1').value
+                const image_link2 = document.getElementById('imagelink2').value
+                const image_link3 = document.getElementById('imagelink3').value
+                const image_link4 = document.getElementById('imagelink4').value
+
+                const size1 = document.getElementById('size1').value
+                const size2 = document.getElementById('size2').value
+                const size3= document.getElementById('size3').value
+                const size4 = document.getElementById('size4').value
+                const size5= document.getElementById('size5').value
+                const size6 = document.getElementById('size6').value
+                const size7 = document.getElementById('size7').value
+                const size8 = document.getElementById('size8').value
+                const size9 = document.getElementById('size9').value
+                const size10 = document.getElementById('size10').value
+                
+
+                 const color1 = document.getElementById('color1').value
+                const color2 = document.getElementById('color2').value
+                const color3= document.getElementById('color3').value
+                const color4 = document.getElementById('color4').value
+                const color5= document.getElementById('color5').value
+                const color6 = document.getElementById('color6').value
+                const color7 = document.getElementById('color7').value
+                const color8 = document.getElementById('color8').value
+
+
+
+               
+				const category= document.getElementById('category').value
+				const price = document.getElementById('price').value
+                const detail = document.getElementById('detail').value
+
+                const image_link=[image_link1,image_link2,image_link3,image_link4]
+                const size=[size1,size2,size3,size4,size5,size6,size7,size8,size9,size10]
+                const color=[color1,color2,color3,color4,color5,color6,color7,color8]
+              
+
+				const result = await fetch('https://anthropologie-application.herokuapp.com/products', {
+					method: 'POST',
+					headers: {
+						'Content-Type': 'application/json',
+                       
+					},
+                    
+					body: JSON.stringify({
+                       title,
+                       image_link,
+                       size,
+                       color,
+                       category,
+                       price,
+                       detail
+					})
+				}).then((res) => res.json())
+				console.log(result)
+
+				if (result.status === 'ok') {
+					// everythign went fine
+					alert('Success')
+				
+				} else {
+					alert(result.error)
+				}
+			}
+</script>

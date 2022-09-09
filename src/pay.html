@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="https://pbs.twimg.com/profile_images/478485967569813504/hyUTkk4f_400x400.jpeg">
+    <script src="https://kit.fontawesome.com/0cbcac785e.js" crossorigin="anonymous"></script>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="./styles/checkout.css"> -->
+    <title>check out</title>
+</head>
+<style>
+    body{
+    font-family: 'Open Sans', sans-serif;
+}
+.Lbox>img{
+    width: 130px;
+    margin-left: 20px;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+}
+.container{
+    width: 80%;
+    
+    display: flex;
+    margin: auto;
+    
+}
+.topfixed{
+    width: 100%;
+    border: 1px solid transparent;
+    height: 130px;
+}
+.topfixed>h1{
+    margin-top: 5px;
+}
+.topfixed>button,.payment>button{
+    border-radius: 50%;
+    background-color: black;
+    border: 1px solid black;
+    color: white;
+    height: 25px;
+    width: 25px;
+}
+.bottomvar{
+    width: 100%;
+    height: 350px;
+    
+    
+    border: 1px solid transparent;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 20px;
+    grid-template-areas: 
+    "Email Email"
+    "Fname Lname"
+    "Address Address"
+    "Add2 PC"
+    "City Region"
+    "Phone Location"
+    
+}
+.bottomvar>input{
+    border-radius: 5px;
+    border: 1px solid gray;
+
+}
+.continue{
+    width: 100%;
+    text-align: center;
+    
+    border: 1px solid transparent
+}
+.continue>button{
+    padding: 12px 140px;
+    margin-top: 25px;
+    font-size: 15px;
+    background-color: black;
+    color: white;
+    border: transparent;
+    border-radius: 5px;
+}
+.toporder>button{
+    width: 100%;
+    height: 40px;
+    margin-top: 25px;
+    font-size: 15px;
+    background-color: black;
+    color: white;
+    border: transparent;
+    border-radius: 5px;
+    
+}
+.toporder>button:hover{
+    background-color: gray;
+}
+
+.continue>button:hover{
+    background-color: gray;
+}
+.deliveryMain{
+    width: 100%;
+    display: none;
+}
+.payment{
+    width: 100%
+}
+.payment>div{
+    font-size: 12px;
+    text-align: center;
+}
+.deliveryAdd>p{
+    font-size: 14px;
+
+
+}
+.del_date{
+    font-size: 14px;
+}
+.deliveryAdd{
+    line-height: 6px;
+    
+}
+.del_date{
+    line-height: 6px;
+}
+.paymentHidden{
+    display:none;
+
+    width: 100%;
+}
+.paymentHidden>span{
+    font-size: 14px;
+}
+.paymentHidden>img{
+    margin-left: 50px;
+    
+}
+#card{
+    border: 1px solid transparent;
+    height: 130px;
+    width: 60%;
+    margin: 20px;
+}
+#cardno{
+    width: 97.5%;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid gray;
+
+}
+#exy{
+    width: 45%;
+    height: 40px;
+    margin-top: 20px;
+    border-radius: 5px;
+    border: 1px solid gray;
+}
+#sec{
+    width: 45%;
+    height:40px ;
+    margin-left: 20px;
+    border-radius: 5px;
+    border: 1px solid gray;
+}
+
+
+#placeord{
+    height: 120px;
+    width: 100%;
+    border: 1px solid transparent;
+    text-align: center;
+}
+#placeord>button{
+    padding: 10px 140px;
+    font-size: 15px;
+    margin-top: 25px;
+    background-color: black;
+    color: white;
+    border: transparent;
+    border-radius: 5px;
+
+}
+#condi{
+    width: 100%;
+    text-align: center;
+}
+#condi>p{
+    font-size: 12px;
+}
+.leftbox{
+   
+   width: 68%;
+}
+
+   
+
+.rightbox{
+   width: 30%;
+   height: auto;
+   
+   background-color: whitesmoke;
+   margin-left: 2%;
+   text-align: center;
+}
+.toporder{
+   width: 90%;
+   height: 100px;
+   
+   margin: 10px 0px 0px 15px;
+   text-align: left;
+
+}
+.toporder>hr{
+   margin: 20px 0px
+   
+}
+.leftbox{
+   color:#393939
+}
+.rightbox{
+   color: #393939;
+}
+#gotobag:hover{
+   color: gray;
+}
+input:focus{
+box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+}
+
+
+</style>
+<body>
+    <div class="header">
+        <div class="Lbox" style="margin-top:20px;">
+            <img style="border-radius: 20px;width:15%;" src="https://upload.wikimedia.org/wikipedia/commons/0/09/Snapdeal_logo_new.png" alt="">
+        </div>
+        <div class="Rbox" style="font-size: 40px;padding: 15px 30px;">
+        <a href="cart1.html">    <i class="fas fa-shopping-cart" id="gotobag"></i></a>
+        </div>
+    </div>
+    <hr style="margin-bottom: 0px;width: 80%;">
+    <div class="container">
+        
+        <div class="leftbox">
+            <div class="topfixed">
+                
+                <h1 style="font-size: 23px;"><i class="fas fa-shield-alt"></i> Secure Checkout<span style="font-size: 15px; margin-left: 5px;font-weight: 400;">powered by Borderfree</span></h1>
+                <p style="font-size: 15px;">Already have a Borderfree account? Click<span style="color: blue;"> here</span>.<i class="fas fa-question-circle"></i>
+                </p>
+                <hr>
+                <button>1</button>
+                <span style="font-size:17px;">Delivery</span>
+            </div>
+            <div class="bottomvar">
+                <input id="Email" placeholder="Email" style="grid-area:Email ;">
+                <input id="Fname" placeholder="First Name" style="grid-area:Fname;">
+                <input id="Lname" placeholder="Last Name" style="grid-area:Lname ;">
+                <input id="Address" placeholder="Address" style="grid-area:Address ;">
+                <input id="Add2" placeholder="Address 2 (Optonal)" style="grid-area:Add2 ;">
+                <input id="PC" placeholder="Postal Code" style="grid-area:PC;">
+                <input id="City" placeholder="City" style="grid-area:City ;">
+                <input id="Region" placeholder="Region (Optonal)" style="grid-area:Region;">
+                <input id="Phone" placeholder="Phone" style="grid-area:Phone ;">
+                <input id="Location" placeholder="Location" style="grid-area:Location;">
+            </div>
+            <div class="continue">
+                <button>Continue</button>
+                <hr>
+            </div>
+            <div class="deliveryMain">
+                <div class="deliveryAdd" style="display: inline-block;width: 50%;">
+                    <h3 style="font-size: 14px;margin-bottom: 25px;">DELIVERY ADDRESS:</h3>
+                    <p id="del_name"></p>
+                    <p id="del_add"></p>
+                    <p id="del_city"></p>
+                    <p id="del_country"></p>
+                </div>
+                <div class="del_date" style="display: inline-block;">
+                    <h3 style="font-size: 14px;margin-bottom:25px ;">DELIVERY METHOD:</h3>
+                    <p>STANDARD</p>
+                    <p>NO ADDITIONAL IMPORT CHARGES AT</p>
+                    <p>DELIVERY</p>
+                    <p>11-21 BUSINESS DAYS</p>
+                </div>
+                <hr>
+            </div>
+            <div class="payment">
+                <button>2</button>
+                <span style="font-size:18px;">Payment</span>
+                <hr>
+            </div>
+            <div class="paymentHidden">
+                <input type="radio">
+                <span>Credit or Debit Card</span>
+                <img src="https://www.kindpng.com/picc/m/35-351793_credit-or-debit-card-mastercard-logo-visa-card.png" height="25px">
+                <div id="card">
+                    <input id="cardno" placeholder="Card Number">
+                    <input id="exy" placeholder="MM/YY">
+                    <input id="sec" placeholder="Security Code">
+                </div>
+                <hr style="border: .5px dashed;color: gray;">
+                <input type="checkbox" style="margin-top: 10px;">
+                <span style="font-size: 13px;"> Send me electronic or mail offers from Borderfree. You may opt out at any time.</span>
+                <div id="placeord">
+                    <button id="Porder">Place Order</button>
+                    <p style="font-size: 14px;">This order total is 100% guaranteed. There will be no additional charges due upon receipt.
+                    </p>
+                </div>
+                <hr>
+            </div>
+            <div id="condi">
+                <p>© 2022 Snapdeal USA, Inc. All rights reserved.Terms of Use|Privacy Policy
+
+                    1-877-Snapdeal (1-877-737-4672)|TTY (1-888-866-9845)|customerservice@snapdeal.com</p>
+            </div>
+            
+           
+
+        </div>
+        <div class="rightbox">
+            <div class="toporder">
+                <span style="font-size: 21px; font-weight: bolder;padding: 15px 0px;"><i class="fas fa-cart-arrow-down"></i> Your Order</span>
+                <button id="saytq">Continue</button>
+                <div id="usegrid">
+                    <div style="display: flex;justify-content: space-between;border:1px solid transparent;height: 40px;">
+                        <p>Items</p>
+                        <P id="itemtotal">5000</P>
+                    </div>
+                    <div style="display: flex;justify-content: space-between;border:1px solid transparent;height: 40px;">
+                        <p>Shipping <i class="fas fa-question-circle"></i></p>
+                        <p>Rs 0</p>
+
+                    </div>
+                    <div style="display: flex;justify-content: space-between;border:1px solid transparent;height: 40px;">
+                        <P>Duties & Taxes <i class="fas fa-question-circle"></i></P>
+                        <p>Rs 0</p>
+
+                    </div>
+                    <div style="display: flex;justify-content: space-between;">
+                        <p style="font-weight: bolder;font-size: large;">TOTAL</p>
+                        <P style="font-weight: bolder; font-size: large;" id="TOT">96000</P>
+
+                    </div>
+                </div>
+                <hr>
+                <input id="promoid" type="text" placeholder="Promo code" style="height: 25px;">
+                <button id="promo">apply promo</button>
+                
+                <hr>
+
+            </div>
+        </div>
+    </div>
+    
+</body>
+<script>
+    document.querySelector(".continue").addEventListener("click",hide)
+function hide(){
+   
+    //getting name
+
+
+    if(document.querySelector(".bottomvar>input").value==""){
+        alert("Please Enter All Data")
+    }
+    else{
+        document.querySelector(".bottomvar").style.display="none";
+        document.querySelector(".continue").style.display="none";
+        document.querySelector(".topfixed>button").style.background="white"
+        document.querySelector(".topfixed>button").style.color="black"
+        document.querySelector(".deliveryMain").style.display="block"
+        var name=document.querySelector("#Fname").value+" "+document.querySelector("#Lname").value
+        console.log(name)
+        document.querySelector("#del_name").textContent=name
+
+        var add=document.querySelector("#Address").value
+        document.querySelector("#del_add").textContent=add
+
+        var city=document.querySelector("#City").value+" "+document.querySelector("#Region").value+" "+document.querySelector("#PC").value
+        document.querySelector("#del_city").textContent=city
+
+        var country=document.querySelector("#Location").value
+        document.querySelector("#del_country").textContent=country
+
+        document.querySelector(".paymentHidden").style.display="block"
+
+
+        
+    }
+
+    
+}
+// document.querySelector("#gotobag").addEventListener("click",function(){
+//     window.location.href="shopping_bag.html"
+// })
+//let totalbefore=50000;
+var totalbefore=JSON.parse(localStorage.getItem("totalprice"))||[];
+//var totalbefore=localStorage.getItem("addition")
+console.log(totalbefore)
+
+document.querySelector("#itemtotal").textContent=totalbefore
+document.querySelector("#TOT").textContent=totalbefore
+
+document.querySelector("#promo").addEventListener("click",function(){
+    if(document.querySelector("#promoid").value=="masai30"){
+        document.querySelector("#itemtotal").textContent=Math.floor(totalbefore*0.7)
+        document.querySelector("#TOT").textContent=Math.floor(totalbefore*0.7)
+        
+    }
+    else{
+        alert("Wrong code")
+    }
+    
+
+})
+document.querySelector("#saytq").addEventListener("click",function(){
+    window.location.href="welcome.html"
+})
+document.querySelector("#Porder").addEventListener("click",function(){
+    if(document.querySelector("#card>input").value==""){
+        alert("Please fill card details")
+    }
+    else{
+        alert("card added succesfully")
+
+    }
+
+})
+
+</script>
+</html>
